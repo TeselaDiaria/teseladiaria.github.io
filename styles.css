@@ -332,6 +332,14 @@ main {
   list-style: none;
 }
 
+.pie {
+  margin: 28px 0 0;
+  color: var(--tinta-suave);
+  font-size: 0.82rem;
+  text-align: center;
+}
+.pie a { color: inherit; }
+
 .def.activa { border-color: var(--tinta); box-shadow: inset 4px 0 0 var(--tinta); }
 
 .def.completa .def-texto { color: var(--tinta-suave); }

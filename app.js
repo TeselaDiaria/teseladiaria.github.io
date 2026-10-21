@@ -853,6 +853,7 @@
 
   async function iniciar() {
     ponerTema(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
+    $('pie-anio').textContent = new Date().getFullYear();
     construirTeclado();
     vigilarAlturaPanel();
     enlazarEventos();
