@@ -131,6 +131,13 @@ h1, h2, h3 {
 
 .boton-icono svg .relleno { fill: currentColor; }
 
+.racha { grid-auto-flow: column; gap: 2px; padding: 0 8px 0 6px; color: var(--acento); }
+.racha svg { fill: currentColor; fill-opacity: 0.18; }
+.racha span { font-weight: 700; font-variant-numeric: tabular-nums; color: var(--tinta); }
+.racha.apagada { color: var(--tinta-suave); }
+.racha.apagada svg { fill: none; }
+.racha.apagada span { color: var(--tinta-suave); }
+
 .boton-icono:hover { background: color-mix(in srgb, var(--junta) 45%, transparent); }
 
 /* Barra de la partida, fija bajo la cabecera */

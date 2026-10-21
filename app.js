@@ -177,6 +177,7 @@
     document.title = `Tesela nº ${p.numero}`;
     mostrarAviso();
     actualizar();
+    pintarRacha();
     window.scrollTo(0, 0);
   }
 
@@ -474,6 +475,7 @@
       progreso.resueltaEl = fechaLocal();
       guardar();
       actualizar();
+      pintarRacha();
       setTimeout(mostrarFin, reducirMovimiento.matches ? 0 : 900);
     } else if (llenas === N) {
       tostar('La rejilla está llena, pero hay algún error');
@@ -634,6 +636,14 @@
     }
   }
 
+  function pintarRacha() {
+    const { actual } = estadisticas();
+    const boton = $('btn-racha');
+    $('racha-numero').textContent = actual;
+    boton.classList.toggle('apagada', actual === 0);
+    boton.setAttribute('aria-label', `Racha actual: ${plural(actual, 'día', 'días')}`);
+  }
+
   function pintarArchivo() {
     const lista = $('lista-archivo');
     lista.textContent = '';
@@ -656,8 +666,10 @@
 
   function abrirDialogo(id) {
     const dlg = $(id);
-    if (id === 'dlg-estadisticas') pintarEstadisticas();
-    if (id === 'dlg-archivo') pintarArchivo();
+    if (id === 'dlg-archivo') {
+      pintarEstadisticas();
+      pintarArchivo();
+    }
     if (!dlg.open) dlg.showModal();
   }
 

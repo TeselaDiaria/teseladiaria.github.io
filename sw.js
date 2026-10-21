@@ -1,5 +1,5 @@
 // Tesela · service worker: la app funciona sin conexión y las partidas nuevas llegan en cuanto hay red.
-const CACHE = 'tesela-v4';
+const CACHE = 'tesela-v5';
 const BASICOS = [
   './',
   'index.html',

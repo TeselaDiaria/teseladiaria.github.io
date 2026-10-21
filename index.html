@@ -56,11 +56,12 @@
       <h1>Tesela</h1>
     </div>
     <nav class="menu" aria-label="Menú">
-      <button type="button" class="boton-icono" data-abre="dlg-archivo" aria-label="Archivo de partidas">
+      <button type="button" class="boton-icono" data-abre="dlg-archivo" aria-label="Archivo y estadísticas">
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
       </button>
-      <button type="button" class="boton-icono" data-abre="dlg-estadisticas" aria-label="Estadísticas">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V12M12 20V5M19 20v-5"/></svg>
+      <button type="button" class="boton-icono racha apagada" id="btn-racha" data-abre="dlg-archivo" aria-label="Racha actual: 0 días">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21c-3.6 0-6-2.4-6-5.6 0-2.6 1.6-4.4 3-5.9.3 1.5 1.1 2.5 2.1 2.9-.4-3 .9-5.6 3.4-7.4-.2 2.3.7 3.9 2 5.4 1 1.2 1.5 2.6 1.5 4.3 0 3.2-2.4 5.6-6 5.6z"/></svg>
+        <span id="racha-numero" aria-hidden="true">0</span>
       </button>
       <button type="button" class="boton-icono" data-abre="dlg-ayuda" aria-label="Cómo se juega">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.5a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.7"/><circle cx="12" cy="17" r=".6" class="relleno"/></svg>
@@ -115,16 +116,13 @@
     <form method="dialog"><button class="boton boton-principal ancho">A jugar</button></form>
   </dialog>
 
-  <dialog id="dlg-estadisticas" aria-labelledby="estadisticas-titulo">
-    <form method="dialog" class="dlg-cierre"><button class="boton-icono" aria-label="Cerrar">✕</button></form>
-    <h2 id="estadisticas-titulo">Estadísticas</h2>
-    <dl class="cifras" id="cifras"></dl>
-    <p class="nota">La racha cuenta los días seguidos en que resuelves la partida de ese mismo día.</p>
-  </dialog>
-
   <dialog id="dlg-archivo" aria-labelledby="archivo-titulo">
     <form method="dialog" class="dlg-cierre"><button class="boton-icono" aria-label="Cerrar">✕</button></form>
     <h2 id="archivo-titulo">Archivo</h2>
+    <h3>Estadísticas</h3>
+    <dl class="cifras" id="cifras"></dl>
+    <p class="nota">La racha cuenta los días seguidos en que resuelves la partida de ese mismo día.</p>
+    <h3>Partidas</h3>
     <p class="nota">Las partidas anteriores se pueden jugar, pero no cuentan para la racha.</p>
     <ul class="archivo" id="lista-archivo"></ul>
   </dialog>
