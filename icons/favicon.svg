@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Tesela">
+<title>Tesela</title><defs>
+<clipPath id="t0"><rect x="4.00" y="4.00" width="26.00" height="26.00"/></clipPath>
+<clipPath id="t1"><rect x="34.00" y="4.00" width="26.00" height="26.00"/></clipPath>
+<clipPath id="t2"><rect x="4.00" y="34.00" width="26.00" height="26.00"/></clipPath>
+<clipPath id="t3"><rect x="34.00" y="34.00" width="26.00" height="26.00"/></clipPath>
+</defs>
+<rect width="64" height="64" rx="10" fill="#c9d3dc"/>
+<g clip-path="url(#t0)"><rect x="4.00" y="4.00" width="26.00" height="26.00" fill="#f4ede2"/><circle cx="30.00" cy="30.00" r="11.96" fill="#b23a48"/><circle cx="4.00" cy="4.00" r="7.80" fill="#2a4d69"/></g>
+<g clip-path="url(#t1)"><rect x="34.00" y="4.00" width="26.00" height="26.00" fill="#f4ede2"/><circle cx="34.00" cy="30.00" r="11.96" fill="#b23a48"/><circle cx="60.00" cy="4.00" r="7.80" fill="#2a4d69"/></g>
+<g clip-path="url(#t2)"><rect x="4.00" y="34.00" width="26.00" height="26.00" fill="#f4ede2"/><circle cx="30.00" cy="34.00" r="11.96" fill="#b23a48"/><circle cx="4.00" cy="60.00" r="7.80" fill="#2a4d69"/></g>
+<g clip-path="url(#t3)"><rect x="34.00" y="34.00" width="26.00" height="26.00" fill="#f4ede2"/><circle cx="34.00" cy="34.00" r="11.96" fill="#b23a48"/><circle cx="60.00" cy="60.00" r="7.80" fill="#2a4d69"/></g>
+</svg>

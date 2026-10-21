@@ -1,0 +1,178 @@
+[
+  {
+    "numero": 1,
+    "fecha": "2026-10-21",
+    "frase": "La libertad, Sancho, es uno de los más preciosos dones",
+    "autor": "Miguel de Cervantes",
+    "obra": "Don Quijote de la Mancha, segunda parte (1615), cap. LVIII",
+    "cita_completa": "La libertad, Sancho, es uno de los más preciosos dones que a los hombres dieron los cielos.",
+    "letras": 43,
+    "oculta": {"palabra": "SANCHO", "definicion": "Nombre de quien escucha la frase"},
+    "definiciones": [
+      {"respuesta": "SOLDADOS", "definicion": "Gente de tropa", "casillas": [11, 40, 1, 39, 2, 10, 21, 38]},
+      {"respuesta": "APELLIDOS", "definicion": "Nombres de familia que siguen al de pila", "casillas": [12, 30, 32, 24, 3, 4, 22, 16, 29]},
+      {"respuesta": "NOMBRES", "definicion": "Sustantivos, para el gramático", "casillas": [13, 37, 27, 5, 7, 23, 18]},
+      {"respuesta": "CISNES", "definicion": "Aves de largo cuello que Rubén Darío hizo emblema del modernismo", "casillas": [33, 34, 26, 41, 42, 43]},
+      {"respuesta": "HUERTA", "definicion": "Tierra de regadío para hortalizas y frutales", "casillas": [15, 19, 17, 31, 8, 9]},
+      {"respuesta": "OCÉANOS", "definicion": "Las mayores extensiones de agua salada", "casillas": [25, 14, 6, 28, 20, 35, 36]}
+    ]
+  },
+  {
+    "numero": 2,
+    "fecha": "2026-10-22",
+    "frase": "Caminante, no hay camino, se hace camino al andar",
+    "autor": "Antonio Machado",
+    "obra": "«Proverbios y cantares», XXIX, en Campos de Castilla (1912)",
+    "cita_completa": "Caminante, son tus huellas / el camino y nada más; / caminante, no hay camino, / se hace camino al andar.",
+    "letras": 39,
+    "oculta": {"palabra": "MACHADO", "definicion": "Apellido del autor de la frase"},
+    "definiciones": [
+      {"respuesta": "MANANTIAL", "definicion": "Nacimiento natural de agua", "casillas": [29, 13, 5, 24, 19, 8, 4, 16, 34]},
+      {"respuesta": "AMORES", "definicion": "Pasiones del corazón, en plural", "casillas": [6, 3, 20, 39, 26, 21]},
+      {"respuesta": "CANCIÓN", "definicion": "Composición en verso hecha para cantarse", "casillas": [27, 35, 36, 1, 30, 32, 10]},
+      {"respuesta": "HAYA", "definicion": "Árbol de corteza lisa y gris; también, forma del verbo haber", "casillas": [23, 2, 14, 38]},
+      {"respuesta": "AMÉN", "definicion": "Así sea, al final de una oración", "casillas": [28, 17, 9, 31]},
+      {"respuesta": "DICHA", "definicion": "Felicidad", "casillas": [37, 18, 25, 12, 33]},
+      {"respuesta": "ONCE", "definicion": "Diez más uno", "casillas": [11, 7, 15, 22]}
+    ]
+  },
+  {
+    "numero": 3,
+    "fecha": "2026-10-23",
+    "frase": "Esto es amor: quien lo probó lo sabe",
+    "autor": "Lope de Vega",
+    "obra": "Soneto «Desmayarse, atreverse, estar furioso», en Rimas (1602)",
+    "cita_completa": "Creer que un cielo en un infierno cabe, / dar la vida y el alma a un desengaño: / esto es amor; quien lo probó lo sabe.",
+    "letras": 28,
+    "oculta": {"palabra": "LOPE", "definicion": "Nombre del autor de la frase"},
+    "definiciones": [
+      {"respuesta": "LOBERA", "definicion": "Guarida de lobos", "casillas": [23, 20, 27, 28, 10, 26]},
+      {"respuesta": "OBSEQUIO", "definicion": "Regalo", "casillas": [22, 21, 2, 14, 11, 12, 13, 24]},
+      {"respuesta": "PALOMOS", "definicion": "Machos de la paloma", "casillas": [18, 7, 16, 9, 8, 4, 6]},
+      {"respuesta": "ETERNOS", "definicion": "Que no tienen fin", "casillas": [5, 3, 1, 19, 15, 17, 25]}
+    ]
+  },
+  {
+    "numero": 4,
+    "fecha": "2026-10-24",
+    "frase": "Los suspiros son aire y van al aire",
+    "autor": "Gustavo Adolfo Bécquer",
+    "obra": "Rima XXXVIII (1871)",
+    "cita_completa": "Los suspiros son aire y van al aire. / Las lágrimas son agua y van al mar. / Dime, mujer: cuando el amor se olvida, / ¿sabes tú adónde va?",
+    "letras": 28,
+    "oculta": {"palabra": "SUAVE", "definicion": "Liso y blando al tacto"},
+    "definiciones": [
+      {"respuesta": "SILLA", "definicion": "Asiento con respaldo para una sola persona", "casillas": [4, 26, 24, 1, 21]},
+      {"respuesta": "URNA", "definicion": "Caja donde se depositan los votos", "casillas": [5, 27, 14, 23]},
+      {"respuesta": "ARROYOS", "definicion": "Corrientes de agua de poco caudal", "casillas": [15, 17, 9, 2, 19, 13, 6]},
+      {"respuesta": "VISIÓN", "definicion": "Sentido de la vista", "casillas": [20, 8, 11, 16, 10, 22]},
+      {"respuesta": "ESPESA", "definicion": "Densa, poco fluida", "casillas": [18, 3, 7, 28, 12, 25]}
+    ]
+  },
+  {
+    "numero": 5,
+    "fecha": "2026-10-25",
+    "frase": "Poderoso caballero es don Dinero",
+    "autor": "Francisco de Quevedo",
+    "obra": "Letrilla satírica «Poderoso caballero es don Dinero»",
+    "cita_completa": "Poderoso caballero / es don Dinero.",
+    "letras": 28,
+    "oculta": {"palabra": "DINERO", "definicion": "Moneda corriente"},
+    "definiciones": [
+      {"respuesta": "DONDE", "definicion": "Adverbio que indica el lugar", "casillas": [20, 17, 22, 3, 26]},
+      {"respuesta": "ISLA", "definicion": "Tierra rodeada de agua por todas partes", "casillas": [24, 7, 14, 10]},
+      {"respuesta": "NOPAL", "definicion": "Chumbera", "casillas": [25, 28, 1, 12, 13]},
+      {"respuesta": "ECOS", "definicion": "Sonidos que vuelven tras rebotar", "casillas": [4, 9, 21, 19]},
+      {"respuesta": "ROEDOR", "definicion": "Mamífero como la ardilla o el ratón", "casillas": [16, 8, 15, 23, 6, 5]},
+      {"respuesta": "ORBE", "definicion": "El mundo entero", "casillas": [2, 27, 11, 18]}
+    ]
+  },
+  {
+    "numero": 6,
+    "fecha": "2026-10-26",
+    "frase": "En una noche oscura, con ansias en amores inflamada",
+    "autor": "San Juan de la Cruz",
+    "obra": "Canciones del alma, «Noche oscura»",
+    "cita_completa": "En una noche oscura, / con ansias, en amores inflamada, / ¡oh dichosa ventura!, / salí sin ser notada, / estando ya mi casa sosegada.",
+    "letras": 42,
+    "oculta": {"palabra": "CARMELO", "definicion": "Orden religiosa a la que perteneció el autor"},
+    "definiciones": [
+      {"respuesta": "CUNA", "definicion": "Cama de los recién nacidos", "casillas": [8, 3, 19, 28]},
+      {"respuesta": "ANCIANOS", "definicion": "Personas de mucha edad", "casillas": [38, 2, 13, 23, 16, 4, 18, 12]},
+      {"respuesta": "RUINA", "definicion": "Lo que queda de un edificio derruido", "casillas": [31, 14, 34, 6, 42]},
+      {"respuesta": "MANCHA", "definicion": "Señal de suciedad; también, la tierra de don Quijote", "casillas": [29, 5, 35, 17, 9, 40]},
+      {"respuesta": "ENFERMAS", "definicion": "Que padecen alguna dolencia, ellas", "casillas": [26, 27, 36, 1, 15, 39, 24, 33]},
+      {"respuesta": "LEONES", "definicion": "Felinos de melena", "casillas": [37, 32, 7, 21, 10, 22]},
+      {"respuesta": "OSADO", "definicion": "Atrevido", "casillas": [11, 25, 20, 41, 30]}
+    ]
+  },
+  {
+    "numero": 7,
+    "fecha": "2026-10-27",
+    "frase": "Que toda la vida es sueño, y los sueños, sueños son",
+    "autor": "Pedro Calderón de la Barca",
+    "obra": "La vida es sueño (1635), jornada II, monólogo de Segismundo",
+    "cita_completa": "¿Qué es la vida? Un frenesí. / ¿Qué es la vida? Una ilusión, / una sombra, una ficción, / y el mayor bien es pequeño; / que toda la vida es sueño, / y los sueños, sueños son.",
+    "letras": 39,
+    "oculta": {"palabra": "ALDEAS", "definicion": "Pueblos pequeños"},
+    "definiciones": [
+      {"respuesta": "AYUNO", "definicion": "Abstinencia de comida", "casillas": [7, 21, 2, 39, 38]},
+      {"respuesta": "LEÑOS", "definicion": "Troncos cortados para el fuego", "casillas": [8, 18, 28, 20, 25]},
+      {"respuesta": "DUEÑOS", "definicion": "Propietarios", "casillas": [6, 26, 14, 34, 5, 31]},
+      {"respuesta": "ESQUELETOS", "definicion": "Armazones de huesos", "casillas": [3, 15, 1, 32, 33, 22, 27, 4, 35, 36]},
+      {"respuesta": "AVISOS", "definicion": "Advertencias", "casillas": [9, 10, 11, 30, 23, 16]},
+      {"respuesta": "SAÑUDOS", "definicion": "Que actúan con saña", "casillas": [24, 13, 19, 17, 12, 29, 37]}
+    ]
+  },
+  {
+    "numero": 8,
+    "fecha": "2026-10-28",
+    "frase": "Escrito está en mi alma vuestro gesto",
+    "autor": "Garcilaso de la Vega",
+    "obra": "Soneto V (publicado en 1543)",
+    "cita_completa": "Escrito está en mi alma vuestro gesto, / y cuanto yo escribir de vos deseo; / vos sola lo escribistes, yo lo leo / tan solo, que aun de vos me guardo en esto.",
+    "letras": 31,
+    "oculta": {"palabra": "CAMAS", "definicion": "Muebles para dormir"},
+    "definiciones": [
+      {"respuesta": "COMETAS", "definicion": "Astros con cola; también, juguetes que vuelan con el viento", "casillas": [3, 26, 14, 28, 6, 16, 2]},
+      {"respuesta": "ALTO", "definicion": "De gran estatura", "casillas": [11, 17, 24, 7]},
+      {"respuesta": "MUSGO", "definicion": "Planta menuda que tapiza las piedras húmedas", "casillas": [18, 21, 29, 27, 31]},
+      {"respuesta": "ARETE", "definicion": "Pendiente para la oreja", "casillas": [19, 4, 22, 10, 8]},
+      {"respuesta": "SIRVIENTES", "definicion": "Criados", "casillas": [23, 15, 25, 20, 5, 1, 13, 30, 12, 9]}
+    ]
+  },
+  {
+    "numero": 9,
+    "fecha": "2026-10-29",
+    "frase": "La princesa está triste, qué tendrá la princesa",
+    "autor": "Rubén Darío",
+    "obra": "«Sonatina», en Prosas profanas (1896)",
+    "cita_completa": "La princesa está triste... ¿qué tendrá la princesa? / Los suspiros se escapan de su boca de fresa, / que ha perdido la risa, que ha perdido el color.",
+    "letras": 39,
+    "oculta": {"palabra": "PERLAS", "definicion": "Joyas que nacen dentro de las ostras"},
+    "definiciones": [
+      {"respuesta": "PIQUETE", "definicion": "Grupo de huelguistas a la puerta de una empresa", "casillas": [3, 5, 21, 22, 37, 15, 23]},
+      {"respuesta": "ENCINA", "definicion": "Árbol que da bellotas", "casillas": [11, 6, 7, 34, 35, 2]},
+      {"respuesta": "RECTAS", "definicion": "Líneas que no se tuercen", "casillas": [16, 20, 36, 19, 29, 18]},
+      {"respuesta": "LISTAS", "definicion": "Relaciones de nombres; también, espabiladas", "casillas": [1, 17, 12, 24, 39, 9]},
+      {"respuesta": "APRENDER", "definicion": "Adquirir conocimientos", "casillas": [14, 32, 4, 8, 26, 27, 25, 33]},
+      {"respuesta": "SALTAR", "definicion": "Elevarse del suelo con impulso", "casillas": [38, 10, 30, 13, 31, 28]}
+    ]
+  },
+  {
+    "numero": 10,
+    "fecha": "2026-10-30",
+    "frase": "Navega, velero mío, sin temor",
+    "autor": "José de Espronceda",
+    "obra": "«Canción del pirata» (1835)",
+    "cita_completa": "Navega, velero mío, / sin temor, / que ni enemigo navío / ni tormenta, ni bonanza / tu rumbo a torcer alcanza, / ni a sujetar tu valor.",
+    "letras": 23,
+    "oculta": {"palabra": "VANO", "definicion": "Inútil, sin efecto"},
+    "definiciones": [
+      {"respuesta": "VIENTRE", "definicion": "Abdomen", "casillas": [7, 17, 20, 1, 19, 11, 8]},
+      {"respuesta": "AMARGOS", "definicion": "Del sabor de la hiel", "casillas": [2, 13, 6, 23, 5, 15, 16]},
+      {"respuesta": "NIEVE", "definicion": "Agua helada que cae en copos", "casillas": [18, 14, 4, 3, 10]},
+      {"respuesta": "OLMO", "definicion": "Árbol de sombra frecuente en plazas y riberas", "casillas": [12, 9, 21, 22]}
+    ]
+  }
+]

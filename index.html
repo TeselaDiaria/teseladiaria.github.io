@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tesela · el damero diario</title>
+  <meta name="description" content="Cada día, una cita de la literatura en español escondida en una rejilla.">
+  <meta name="theme-color" content="#2a4d69">
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="icons/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&family=Young+Serif&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="cabecera">
+    <div class="marca">
+      <img src="icons/icon-rounded.svg" width="40" height="40" alt="">
+      <h1>Tesela</h1>
+    </div>
+    <nav class="menu" aria-label="Menú">
+      <button type="button" class="boton-icono" data-abre="dlg-archivo" aria-label="Archivo de partidas">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+      </button>
+      <button type="button" class="boton-icono" data-abre="dlg-estadisticas" aria-label="Estadísticas">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V12M12 20V5M19 20v-5"/></svg>
+      </button>
+      <button type="button" class="boton-icono" data-abre="dlg-ayuda" aria-label="Cómo se juega">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.5a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.7"/><circle cx="12" cy="17" r=".6" class="relleno"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <div class="barra-partida">
+    <p class="titulo-partida" id="titulo-partida"></p>
+    <div class="ayudas">
+      <button type="button" class="boton" id="btn-comprobar">Comprobar</button>
+      <button type="button" class="boton" id="btn-revelar" aria-label="Revelar letra">Revelar</button>
+    </div>
+  </div>
+
+  <main id="principal">
+    <p class="aviso" id="aviso" hidden></p>
+    <section class="rejilla" id="rejilla" aria-label="Rejilla"></section>
+    <button type="button" class="boton boton-principal ver-resultado" id="btn-ver-resultado" hidden>Ver resultado</button>
+    <section class="oculta" id="oculta" aria-label="Palabra oculta"></section>
+    <ol class="definiciones" id="definiciones" aria-label="Definiciones"></ol>
+  </main>
+
+  <div class="panel" id="panel">
+    <div class="pista">
+      <button type="button" class="boton-icono" id="btn-def-anterior" aria-label="Definición anterior">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <p class="pista-texto" id="pista-texto" aria-live="polite"></p>
+      <button type="button" class="boton-icono" id="btn-def-siguiente" aria-label="Definición siguiente">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+    <div class="teclado" id="teclado" aria-label="Teclado"></div>
+  </div>
+
+  <div class="tostada" id="tostada" role="status" aria-live="polite"></div>
+
+  <dialog id="dlg-ayuda" aria-labelledby="ayuda-titulo">
+    <form method="dialog" class="dlg-cierre"><button class="boton-icono" aria-label="Cerrar">✕</button></form>
+    <h2 id="ayuda-titulo">Cómo se juega</h2>
+    <p>Cada día, Tesela esconde una cita de la literatura en español. Resuelve las definiciones: cada letra lleva un número y pasa a la casilla con ese número de la rejilla. También puedes escribir directamente en la rejilla, y la letra viajará a su definición. La frase te ayuda con las definiciones difíciles, y las definiciones te ayudan con la frase.</p>
+    <p>Las iniciales de las respuestas, leídas en orden, forman una palabra oculta. Tiene su propia definición.</p>
+    <p>Puedes comprobar tus letras o revelar alguna cuando te atasques. Cuantas menos ayudas uses, mejor.</p>
+    <form method="dialog"><button class="boton boton-principal ancho">A jugar</button></form>
+  </dialog>
+
+  <dialog id="dlg-estadisticas" aria-labelledby="estadisticas-titulo">
+    <form method="dialog" class="dlg-cierre"><button class="boton-icono" aria-label="Cerrar">✕</button></form>
+    <h2 id="estadisticas-titulo">Estadísticas</h2>
+    <dl class="cifras" id="cifras"></dl>
+    <p class="nota">La racha cuenta los días seguidos en que resuelves la partida de ese mismo día.</p>
+  </dialog>
+
+  <dialog id="dlg-archivo" aria-labelledby="archivo-titulo">
+    <form method="dialog" class="dlg-cierre"><button class="boton-icono" aria-label="Cerrar">✕</button></form>
+    <h2 id="archivo-titulo">Archivo</h2>
+    <p class="nota">Las partidas anteriores se pueden jugar, pero no cuentan para la racha.</p>
+    <ul class="archivo" id="lista-archivo"></ul>
+  </dialog>
+
+  <dialog id="dlg-fin" aria-labelledby="fin-titulo">
+    <form method="dialog" class="dlg-cierre"><button class="boton-icono" aria-label="Cerrar">✕</button></form>
+    <h2 id="fin-titulo" tabindex="-1" autofocus>¡Resuelta!</h2>
+    <blockquote class="cita" id="fin-cita"></blockquote>
+    <p class="cita-fuente" id="fin-fuente"></p>
+    <h3>Palabra oculta</h3>
+    <p class="fin-oculta" id="fin-oculta"></p>
+    <h3>Respuestas</h3>
+    <ol class="fin-respuestas" id="fin-respuestas"></ol>
+    <h3>Tu resultado</h3>
+    <textarea class="resultado" id="fin-resultado" rows="2" readonly aria-label="Resultado para compartir"></textarea>
+    <p class="nota" id="fin-nota" hidden></p>
+    <button type="button" class="boton boton-principal ancho" id="btn-copiar">Copiar resultado</button>
+  </dialog>
+</body>
+</html>
