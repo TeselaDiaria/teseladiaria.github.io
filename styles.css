@@ -549,6 +549,30 @@ dialog p { margin: 0 0 12px; }
   resize: none;
 }
 
+.mosaico {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 22px 0 4px;
+}
+
+.tesela-res {
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+  background: #2a4d69;
+}
+.tesela-res.error { background: #d9a441; }
+.tesela-res.revelada { background: #b23a48; }
+
+.cuenta-atras {
+  margin: 12px 0 0;
+  color: var(--tinta-suave);
+  font-size: 0.92rem;
+  text-align: center;
+}
+
 .vacio { text-align: center; padding: 40px 0; }
 
 @media (prefers-reduced-motion: no-preference) {

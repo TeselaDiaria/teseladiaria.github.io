@@ -5,6 +5,7 @@
   const FILAS_TECLADO = ['QWERTYUIOP', 'ASDFGHJKLÑ', 'ZXCVBNM'];
   const CLAVE_AYUDA_VISTA = 'tesela-ayuda-vista';
   const CLAVE_TEMA = 'tesela-tema';
+  const URL_JUEGO = 'teseladiaria.github.io';
   const COLOR_BARRA = { light: '#2a4d69', dark: '#111a22' };
   const reducirMovimiento = matchMedia('(prefers-reduced-motion: reduce)');
 
@@ -81,7 +82,7 @@
   const claveProgreso = (fecha) => `tesela:${fecha}`;
 
   function progresoVacio() {
-    return { letras: {}, reveladas: [], comprobaciones: 0, terminada: false, resueltaEl: null };
+    return { letras: {}, reveladas: [], fallos: [], comprobaciones: 0, terminada: false, resueltaEl: null };
   }
 
   function leerProgreso(fecha) {
@@ -90,6 +91,7 @@
     return {
       letras: p.letras && typeof p.letras === 'object' ? p.letras : {},
       reveladas: Array.isArray(p.reveladas) ? p.reveladas : [],
+      fallos: Array.isArray(p.fallos) ? p.fallos : [],
       comprobaciones: Number(p.comprobaciones) || 0,
       terminada: Boolean(p.terminada),
       resueltaEl: p.resueltaEl || null,
@@ -431,6 +433,7 @@
     for (const [c, letra] of Object.entries(progreso.letras)) {
       if (letra !== solucion[c]) {
         marcadas.add(Number(c));
+        if (!progreso.fallos.includes(Number(c))) progreso.fallos.push(Number(c));
         malas++;
       }
     }
@@ -477,9 +480,62 @@
     }
   }
 
+  const TESELAS = {
+    limpia: { emoji: '🟦', texto: 'sin ayudas' },
+    error: { emoji: '🟨', texto: 'con error' },
+    revelada: { emoji: '🟥', texto: 'con letra revelada' },
+  };
+
+  // Cómo se resolvió cada definición: una revelada pesa más que un error.
+  function estadosDefiniciones() {
+    const { p, progreso, reveladas } = juego;
+    const fallos = new Set(progreso.fallos);
+    return p.definiciones.map((d) => {
+      if (d.casillas.some((c) => reveladas.has(c))) return 'revelada';
+      if (d.casillas.some((c) => fallos.has(c))) return 'error';
+      return 'limpia';
+    });
+  }
+
+  function mosaico() {
+    return estadosDefiniciones().map((e) => TESELAS[e].emoji).join('');
+  }
+
   function textoResultado() {
     const { p, progreso, reveladas } = juego;
-    return `Tesela nº ${p.numero} · ${fechaCorta(p.fecha)}\n✅ ${plural(progreso.comprobaciones, 'comprobación', 'comprobaciones')} · ${plural(reveladas.size, 'letra revelada', 'letras reveladas')}`;
+    const ayudas = progreso.comprobaciones || reveladas.size
+      ? `${plural(progreso.comprobaciones, 'comprobación', 'comprobaciones')} · ${plural(reveladas.size, 'letra revelada', 'letras reveladas')}`
+      : 'Sin ayudas';
+    return `Tesela nº ${p.numero} · ${fechaCorta(p.fecha)}\n${mosaico()}\n${ayudas}\n${URL_JUEGO}`;
+  }
+
+  function pintarMosaico() {
+    const fila = $('fin-mosaico');
+    fila.textContent = '';
+    estadosDefiniciones().forEach((estado, i) => {
+      const tesela = crear('span', `tesela-res ${estado}`);
+      tesela.setAttribute('role', 'img');
+      tesela.setAttribute('aria-label', `${etiquetaDef(i)}, ${TESELAS[estado].texto}`);
+      fila.append(tesela);
+    });
+  }
+
+  // Tiempo hasta la medianoche local, redondeado al minuto hacia arriba.
+  function textoCuentaAtras(ahora = new Date()) {
+    const medianoche = new Date(ahora.getFullYear(), ahora.getMonth(), ahora.getDate() + 1);
+    const minutos = Math.max(1, Math.ceil((medianoche - ahora) / 60000));
+    const h = Math.floor(minutos / 60);
+    const min = minutos % 60;
+    return `La próxima Tesela, en ${h ? `${h} h ${min} min` : `${min} min`}`;
+  }
+
+  let temporizadorCuentaAtras;
+  function arrancarCuentaAtras() {
+    const linea = $('fin-cuenta');
+    const pintar = () => { linea.textContent = textoCuentaAtras(); };
+    pintar();
+    clearInterval(temporizadorCuentaAtras);
+    temporizadorCuentaAtras = setInterval(pintar, 30000);
   }
 
   function mostrarFin() {
@@ -508,7 +564,9 @@
       lista.append(li);
     }
 
+    pintarMosaico();
     $('fin-resultado').value = textoResultado();
+    arrancarCuentaAtras();
     const nota = $('fin-nota');
     nota.hidden = true;
     const contaba = p.fecha === hoy && juego.progreso.resueltaEl === p.fecha;
@@ -752,6 +810,7 @@
     $('btn-def-anterior').addEventListener('click', () => juego && irADefinicion(defActiva() - 1));
     $('btn-def-siguiente').addEventListener('click', () => juego && irADefinicion(defActiva() + 1));
     $('btn-copiar').addEventListener('click', copiarResultado);
+    $('dlg-fin').addEventListener('close', () => clearInterval(temporizadorCuentaAtras));
     for (const boton of document.querySelectorAll('[data-tema]')) {
       boton.addEventListener('click', () => elegirTema(boton.dataset.tema));
     }
