@@ -219,9 +219,16 @@
     const { p } = juego;
     els.rejilla.textContent = '';
     let c = 0;
-    for (const palabra of normalizar(p.frase).split(/[^A-ZÑ]+/).filter(Boolean)) {
+    // Cada palabra va en su caja con sus signos pegados, para que no se separen al saltar de línea.
+    for (const palabra of p.frase.split(/\s+/).filter(Boolean)) {
       const caja = crear('div', 'palabra');
-      for (let i = 0; i < palabra.length; i++) {
+      for (const caracter of palabra) {
+        if (!letrasDe(caracter).length) {
+          const signo = crear('span', 'signo', caracter);
+          signo.setAttribute('aria-hidden', 'true');
+          caja.append(signo);
+          continue;
+        }
         c++;
         const celda = crearCelda(c, 'rejilla');
         celda.style.setProperty('--i', c);
@@ -366,15 +373,34 @@
   function escribir(letra) {
     if (!juego || juego.progreso.terminada) return;
     const c = juego.cursor.casilla;
+    const llenaHueco = vacia(c) && editable(c);
     if (editable(c)) {
       juego.progreso.letras[c] = letra;
       juego.marcadas.delete(c);
     }
-    avanzar();
+    // Si esta letra completa la palabra, el cursor salta a la siguiente definición con huecos.
+    const siguiente = llenaHueco && juego.cursor.modo === 'def' ? siguienteDefConHueco() : null;
     guardar();
-    actualizar();
-    enfocarCursor();
+    if (siguiente !== null) {
+      irADefinicion(siguiente);
+    } else {
+      avanzar();
+      actualizar();
+      enfocarCursor();
+    }
     comprobarFin();
+  }
+
+  // Índice de la siguiente definición con algún hueco, si la activa ya está completa.
+  function siguienteDefConHueco() {
+    const defs = juego.p.definiciones;
+    const actual = defActiva();
+    if (siguienteVacia(defs[actual].casillas, 0, false)) return null;
+    for (let paso = 1; paso < defs.length; paso++) {
+      const i = (actual + paso) % defs.length;
+      if (siguienteVacia(defs[i].casillas, 0, false)) return i;
+    }
+    return null;
   }
 
   function borrar() {
@@ -415,8 +441,8 @@
     const casillas = juego.p.definiciones[(i + total) % total].casillas;
     juego.cursor = { modo: 'def', casilla: siguienteVacia(casillas, 0, false) || casillas[0] };
     actualizar();
-    // Al pasar a la definición siguiente, la anterior sube hasta quedar bajo la barra fija.
-    if (anterior !== null && i === anterior + 1 && i < total) subirHasta(juego.itemsDef[anterior]);
+    // Al avanzar de definición, la que queda justo encima sube hasta la barra fija.
+    if (anterior !== null && i > anterior && i < total) subirHasta(juego.itemsDef[i - 1]);
     else enfocarCursor();
   }
 
