@@ -4,6 +4,8 @@
   const MESES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
   const FILAS_TECLADO = ['QWERTYUIOP', 'ASDFGHJKLÑ', 'ZXCVBNM'];
   const CLAVE_AYUDA_VISTA = 'tesela-ayuda-vista';
+  const CLAVE_TEMA = 'tesela-tema';
+  const COLOR_BARRA = { light: '#2a4d69', dark: '#111a22' };
   const reducirMovimiento = matchMedia('(prefers-reduced-motion: reduce)');
 
   // ---------- Utilidades ----------
@@ -622,6 +624,26 @@
     els.revelar.disabled = true;
   }
 
+  // ---------- Tema ----------
+
+  // Luminoso por defecto; el script en línea de index.html ya lo aplicó antes de pintar.
+  function ponerTema(tema) {
+    document.documentElement.dataset.theme = tema;
+    document.querySelector('meta[name="theme-color"]').content = COLOR_BARRA[tema];
+    for (const boton of document.querySelectorAll('[data-tema]')) {
+      boton.setAttribute('aria-pressed', String(boton.dataset.tema === tema));
+    }
+  }
+
+  function elegirTema(tema) {
+    ponerTema(tema);
+    try {
+      localStorage.setItem(CLAVE_TEMA, tema);
+    } catch {
+      // Sin almacenamiento: el tema dura hasta que se cierre la página.
+    }
+  }
+
   // ---------- Teclado ----------
 
   function construirTeclado() {
@@ -730,6 +752,9 @@
     $('btn-def-anterior').addEventListener('click', () => juego && irADefinicion(defActiva() - 1));
     $('btn-def-siguiente').addEventListener('click', () => juego && irADefinicion(defActiva() + 1));
     $('btn-copiar').addEventListener('click', copiarResultado);
+    for (const boton of document.querySelectorAll('[data-tema]')) {
+      boton.addEventListener('click', () => elegirTema(boton.dataset.tema));
+    }
     for (const boton of document.querySelectorAll('[data-abre]')) {
       boton.addEventListener('click', () => abrirDialogo(boton.dataset.abre));
     }
@@ -756,6 +781,7 @@
   }
 
   async function iniciar() {
+    ponerTema(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
     construirTeclado();
     vigilarAlturaPanel();
     enlazarEventos();

@@ -15,6 +15,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&family=Young+Serif&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script>
+    // Tema: luminoso por defecto; oscuro solo si el jugador lo eligió. Se aplica antes de pintar.
+    (function () {
+      var tema = 'light';
+      try { if (localStorage.getItem('tesela-tema') === 'dark') tema = 'dark'; } catch (e) {}
+      document.documentElement.dataset.theme = tema;
+      if (tema === 'dark') document.querySelector('meta[name="theme-color"]').content = '#111a22';
+    })();
     // La portada sale en cada carga. Si el navegador devuelve la página de su caché
     // al ir atrás o adelante (ya sin portada), se recarga para que salga.
     window.addEventListener('pageshow', function (e) { if (e.persisted) location.reload(); });
@@ -34,10 +41,8 @@
     #portada img { width: 7.5rem; height: 7.5rem; border-radius: 22%; box-shadow: 0 0 0 1px #c9d3dc, 0 2px 4px rgba(42, 77, 105, 0.25), 0 16px 44px -6px rgba(42, 77, 105, 0.4); animation: asomar 0.5s ease-out; }
     #portada p { margin: 0; font: 2.8rem/1 "Young Serif", Georgia, serif; animation: asomar 0.5s 0.15s ease-out both; }
     #portada.oculta { opacity: 0; visibility: hidden; }
-    @media (prefers-color-scheme: dark) {
-      #portada { background: #111a22; color: #dfe8f0; }
-      #portada img { box-shadow: 0 0 0 1px #33434f, 0 2px 4px rgba(0, 0, 0, 0.6), 0 16px 44px -6px rgba(0, 0, 0, 0.8); }
-    }
+    [data-theme="dark"] #portada { background: #111a22; color: #dfe8f0; }
+    [data-theme="dark"] #portada img { box-shadow: 0 0 0 1px #33434f, 0 2px 4px rgba(0, 0, 0, 0.6), 0 16px 44px -6px rgba(0, 0, 0, 0.8); }
     @keyframes asomar { from { opacity: 0; transform: scale(0.9); } }
     @keyframes retirar { to { opacity: 0; visibility: hidden; } }
     @media (prefers-reduced-motion: reduce) { #portada img, #portada p { animation: none; } }
@@ -100,6 +105,13 @@
     <p>Cada día, Tesela esconde una cita de la literatura en español. Resuelve las definiciones: cada letra lleva un número y pasa a la casilla con ese número de la rejilla. También puedes escribir directamente en la rejilla, y la letra viajará a su definición. La frase te ayuda con las definiciones difíciles, y las definiciones te ayudan con la frase.</p>
     <p>Las iniciales de las respuestas, leídas en orden, forman una palabra oculta. Tiene su propia definición.</p>
     <p>Puedes comprobar tus letras o revelar alguna cuando te atasques. Cuantas menos ayudas uses, mejor.</p>
+    <fieldset class="tema">
+      <legend>Aspecto</legend>
+      <div class="tema-opciones">
+        <button type="button" data-tema="light" aria-pressed="true">Luminoso</button>
+        <button type="button" data-tema="dark" aria-pressed="false">Oscuro</button>
+      </div>
+    </fieldset>
     <form method="dialog"><button class="boton boton-principal ancho">A jugar</button></form>
   </dialog>
 

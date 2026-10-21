@@ -26,24 +26,23 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --fondo: #111a22;
-    --casilla: #1f2b37;
-    --junta: #33434f;
-    --tinta: #dfe8f0;
-    --tinta-suave: #93a5b5;
-    --sobre-tinta: #10202e;
-    --activa-def: #2d4b67;
-    --eco: #5d86ab;
-    --acento: #e2707d;
-    --error-fondo: #4a2129;
-    --revelada: #e3b45e;
-    --revelada-fondo: #3d321c;
-    --superficie: #18232d;
-    --sombra: 0 10px 30px rgb(0 0 0 / 0.5);
-    color-scheme: dark;
-  }
+/* Tema oscuro: solo si el jugador lo elige (por defecto, luminoso). */
+:root[data-theme="dark"] {
+  --fondo: #111a22;
+  --casilla: #1f2b37;
+  --junta: #33434f;
+  --tinta: #dfe8f0;
+  --tinta-suave: #93a5b5;
+  --sobre-tinta: #10202e;
+  --activa-def: #2d4b67;
+  --eco: #5d86ab;
+  --acento: #e2707d;
+  --error-fondo: #4a2129;
+  --revelada: #e3b45e;
+  --revelada-fondo: #3d321c;
+  --superficie: #18232d;
+  --sombra: 0 10px 30px rgb(0 0 0 / 0.5);
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -178,9 +177,7 @@ h1, h2, h3 {
   color: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
-  .boton-principal { color: #1a0d10; }
-}
+:root[data-theme="dark"] .boton-principal { color: #1a0d10; }
 
 .ancho { width: 100%; }
 
@@ -453,6 +450,41 @@ dialog p { margin: 0 0 12px; }
 .dlg-cierre .boton-icono { font-size: 1.1rem; }
 
 .nota { color: var(--tinta-suave); font-size: 0.9rem; }
+
+.tema {
+  margin: 4px 0 18px;
+  padding: 0;
+  border: 0;
+}
+
+.tema legend {
+  margin-bottom: 6px;
+  padding: 0;
+  font-weight: 600;
+}
+
+.tema-opciones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 12px;
+  background: var(--fondo);
+}
+
+.tema-opciones button {
+  min-height: 44px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tema-opciones button[aria-pressed="true"] {
+  background: var(--tinta);
+  color: var(--sobre-tinta);
+}
 
 .cifras {
   display: grid;
