@@ -654,7 +654,7 @@
 
   function teclaFisica(e) {
     if (e.ctrlKey || e.metaKey || e.altKey) return;
-    if (document.querySelector('dialog[open]')) return;
+    if (document.querySelector('dialog[open]') || $('portada')) return;
     if (e.target.closest('textarea, input')) return;
 
     if (e.key.length === 1) {
@@ -680,6 +680,36 @@
   }
 
   // ---------- Arranque ----------
+
+  // La portada se queda 2 s desde que empieza a cargar la página (o hasta que se toca)
+  // y luego se desvanece. Después, si toca, se abren las instrucciones.
+  const DURACION_PORTADA = 2000;
+
+  function retirarPortada(despues) {
+    const portada = $('portada');
+    if (!portada) {
+      despues();
+      return;
+    }
+    let hecho = false;
+    const retirar = () => {
+      if (hecho) return;
+      hecho = true;
+      portada.classList.add('oculta');
+      setTimeout(() => {
+        portada.remove();
+        despues();
+      }, reducirMovimiento.matches ? 0 : 500);
+    };
+    portada.addEventListener('click', retirar);
+    setTimeout(retirar, Math.max(0, DURACION_PORTADA - performance.now()));
+  }
+
+  function quizaAyuda() {
+    if (!juego || almacen.leer(CLAVE_AYUDA_VISTA)) return;
+    almacen.guardar(CLAVE_AYUDA_VISTA, true);
+    abrirDialogo('dlg-ayuda');
+  }
 
   function vigilarAlturaPanel() {
     const fijar = () => document.documentElement.style.setProperty('--panel-h', `${els.panel.offsetHeight}px`);
@@ -731,19 +761,12 @@
     enlazarEventos();
     try {
       await cargarPartidas();
+      if (partidas.length) abrirSegunDireccion();
+      else mostrarVacio('La primera Tesela llega pronto. ¡Vuelve mañana!');
     } catch {
       mostrarVacio('No se han podido cargar las partidas. Comprueba la conexión y recarga la página.');
-      return;
     }
-    if (!partidas.length) {
-      mostrarVacio('La primera Tesela llega pronto. ¡Vuelve mañana!');
-      return;
-    }
-    abrirSegunDireccion();
-    if (!almacen.leer(CLAVE_AYUDA_VISTA)) {
-      almacen.guardar(CLAVE_AYUDA_VISTA, true);
-      abrirDialogo('dlg-ayuda');
-    }
+    retirarPortada(quizaAyuda);
     if ('serviceWorker' in navigator && location.protocol !== 'file:') {
       navigator.serviceWorker.register('sw.js').catch(() => {});
     }

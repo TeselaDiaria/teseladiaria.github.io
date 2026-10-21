@@ -14,9 +14,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&family=Young+Serif&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    // La portada sale en cada carga. Si el navegador devuelve la página de su caché
+    // al ir atrás o adelante (ya sin portada), se recarga para que salga.
+    window.addEventListener('pageshow', function (e) { if (e.persisted) location.reload(); });
+  </script>
   <script src="app.js" defer></script>
+  <!-- Portada en línea: se pinta antes de que cargue styles.css. Repite los colores de :root. -->
+  <style>
+    #portada {
+      position: fixed; inset: 0; z-index: 50;
+      display: grid; place-content: center; justify-items: center; gap: 1rem;
+      background: #e7ecf1; color: #2a4d69;
+      cursor: pointer;
+      transition: opacity 0.5s, visibility 0.5s;
+      /* Por si app.js no llega a retirarla. */
+      animation: retirar 0.4s 5s forwards;
+    }
+    #portada img { width: 7.5rem; height: 7.5rem; border-radius: 22%; box-shadow: 0 0 0 1px #c9d3dc, 0 2px 4px rgba(42, 77, 105, 0.25), 0 16px 44px -6px rgba(42, 77, 105, 0.4); animation: asomar 0.5s ease-out; }
+    #portada p { margin: 0; font: 2.8rem/1 "Young Serif", Georgia, serif; animation: asomar 0.5s 0.15s ease-out both; }
+    #portada.oculta { opacity: 0; visibility: hidden; }
+    @media (prefers-color-scheme: dark) {
+      #portada { background: #111a22; color: #dfe8f0; }
+      #portada img { box-shadow: 0 0 0 1px #33434f, 0 2px 4px rgba(0, 0, 0, 0.6), 0 16px 44px -6px rgba(0, 0, 0, 0.8); }
+    }
+    @keyframes asomar { from { opacity: 0; transform: scale(0.9); } }
+    @keyframes retirar { to { opacity: 0; visibility: hidden; } }
+    @media (prefers-reduced-motion: reduce) { #portada img, #portada p { animation: none; } }
+  </style>
 </head>
 <body>
+  <div id="portada" aria-hidden="true"><img src="icons/icon-rounded.svg" width="120" height="120" alt=""><p>Tesela</p></div>
   <header class="cabecera">
     <div class="marca">
       <img src="icons/icon-rounded.svg" width="40" height="40" alt="">
