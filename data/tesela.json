@@ -174,5 +174,243 @@
       {"respuesta": "NIEVE", "definicion": "Agua helada que cae en copos", "casillas": [18, 14, 4, 3, 10]},
       {"respuesta": "OLMO", "definicion": "Árbol de sombra frecuente en plazas y riberas", "casillas": [12, 9, 21, 22]}
     ]
+  },
+  {
+    "numero": 11,
+    "fecha": "2026-10-31",
+    "frase": "En tierra, en humo, en polvo, en sombra, en nada",
+    "autor": "Luis de Góngora",
+    "obra": "Soneto «Mientras por competir con tu cabello» (1582)",
+    "cita_completa": "Goza cuello, cabello, labio y frente, / antes que lo que fue en tu edad dorada / oro, lilio, clavel, cristal luciente, / no sólo en plata o víola troncada / se vuelva, mas tú y ello juntamente / en tierra, en humo, en polvo, en sombra, en nada.",
+    "letras": 35,
+    "oculta": {"palabra": "TIEMPO", "definicion": "Lo que, según el soneto, acaba con la belleza"},
+    "definiciones": [
+      {"respuesta": "TABLERO", "definicion": "Superficie con casillas para jugar al ajedrez o a las damas", "casillas": [3, 33, 27, 19, 9, 6, 25]},
+      {"respuesta": "INMUNE", "definicion": "Que no puede contraer una enfermedad", "casillas": [4, 10, 13, 12, 32, 5]},
+      {"respuesta": "ENVENENAR", "definicion": "Dar ponzoña", "casillas": [15, 23, 20, 1, 2, 30, 16, 8, 28]},
+      {"respuesta": "MOHO", "definicion": "Hongo que crece sobre el pan viejo", "casillas": [26, 14, 11, 18]},
+      {"respuesta": "PASA", "definicion": "Uva seca", "casillas": [17, 35, 24, 29]},
+      {"respuesta": "ORDEN", "definicion": "Lo contrario del caos", "casillas": [21, 7, 34, 22, 31]}
+    ]
+  },
+  {
+    "numero": 12,
+    "fecha": "2026-11-01",
+    "frase": "No es verdad, ángel de amor, que en esta apartada orilla",
+    "autor": "José Zorrilla",
+    "obra": "Don Juan Tenorio (1844), parte I, acto IV, escena III",
+    "cita_completa": "¿No es verdad, ángel de amor, / que en esta apartada orilla / más pura la luna brilla / y se respira mejor?",
+    "letras": 44,
+    "oculta": {"palabra": "TENORIO", "definicion": "Apellido del burlador que pronuncia la frase"},
+    "definiciones": [
+      {"respuesta": "TOQUE", "definicion": "Golpe suave; también, el último retoque", "casillas": [35, 39, 22, 23, 3]},
+      {"respuesta": "ESTRELLAS", "definicion": "Astros que brillan de noche", "casillas": [27, 28, 29, 34, 17, 15, 42, 33, 4]},
+      {"respuesta": "NAVAL", "definicion": "Relativo a los barcos y la marina", "casillas": [26, 11, 5, 31, 43]},
+      {"respuesta": "ÓPERA", "definicion": "Obra de teatro cantada", "casillas": [2, 32, 6, 21, 44]},
+      {"respuesta": "REDADA", "definicion": "Operación policial en la que se detiene a varios a la vez", "casillas": [40, 14, 37, 18, 10, 38]},
+      {"respuesta": "IMAGEN", "definicion": "Figura, representación", "casillas": [41, 19, 9, 13, 24, 12]},
+      {"respuesta": "ORDENADA", "definicion": "Que tiene cada cosa en su sitio", "casillas": [20, 7, 16, 25, 1, 30, 8, 36]}
+    ]
+  },
+  {
+    "numero": 13,
+    "fecha": "2026-11-02",
+    "frase": "Nuestras vidas son los ríos que van a dar en la mar",
+    "autor": "Jorge Manrique",
+    "obra": "Coplas por la muerte de su padre (c. 1476), copla III",
+    "cita_completa": "Nuestras vidas son los ríos / que van a dar en la mar, / que es el morir; / allí van los señoríos / derechos a se acabar / y consumir.",
+    "letras": 40,
+    "oculta": {"palabra": "MUERTE", "definicion": "Fin de la vida; la mar adonde van los ríos"},
+    "definiciones": [
+      {"respuesta": "MODERNOS", "definicion": "Actuales, de nuestro tiempo", "casillas": [38, 15, 11, 3, 6, 1, 18, 19]},
+      {"respuesta": "UVAS", "definicion": "Frutos de la vid", "casillas": [2, 9, 12, 8]},
+      {"respuesta": "ESQUINAS", "definicion": "Ángulos que forman dos calles al cruzarse", "casillas": [34, 4, 24, 25, 21, 29, 37, 14]},
+      {"respuesta": "RIVAL", "definicion": "Competidor", "casillas": [33, 10, 27, 28, 36]},
+      {"respuesta": "TRASLADAR", "definicion": "Llevar de un lugar a otro", "casillas": [5, 40, 30, 13, 17, 32, 31, 7, 20]},
+      {"respuesta": "ENANOS", "definicion": "Los siete que acogen a Blancanieves", "casillas": [26, 35, 39, 16, 22, 23]}
+    ]
+  },
+  {
+    "numero": 14,
+    "fecha": "2026-11-03",
+    "frase": "Ahí va la loca soñando con la eterna primavera",
+    "autor": "Rosalía de Castro",
+    "obra": "En las orillas del Sar (1884)",
+    "cita_completa": "Dicen que no hablan las plantas, ni las fuentes, ni los pájaros, / ni el onda con sus rumores, ni con su brillo los astros: / lo dicen, pero no es cierto, pues siempre cuando yo paso, / de mí murmuran y exclaman: / —Ahí va la loca soñando / con la eterna primavera de la vida y de los campos.",
+    "letras": 38,
+    "oculta": {"palabra": "ROSALÍA", "definicion": "Nombre de pila de la autora"},
+    "definiciones": [
+      {"respuesta": "RIÑÓN", "definicion": "Órgano que filtra la sangre", "casillas": [37, 3, 14, 9, 16]},
+      {"respuesta": "OCTAVO", "definicion": "Que sigue al séptimo", "casillas": [20, 19, 25, 38, 35, 18]},
+      {"respuesta": "SELVA", "definicion": "Bosque tropical muy espeso", "casillas": [12, 24, 6, 4, 7]},
+      {"respuesta": "ANCHO", "definicion": "Lo contrario de estrecho", "casillas": [15, 21, 10, 2, 13]},
+      {"respuesta": "LÁMPARA", "definicion": "Aparato para dar luz", "casillas": [22, 29, 33, 30, 23, 31, 1]},
+      {"respuesta": "IDEAL", "definicion": "Perfecto, como de ensueño", "casillas": [32, 17, 26, 5, 8]},
+      {"respuesta": "ARENA", "definicion": "La que se pisa en la playa", "casillas": [11, 27, 36, 28, 34]}
+    ]
+  },
+  {
+    "numero": 15,
+    "fecha": "2026-11-04",
+    "frase": "Qué descansada vida la del que huye el mundanal ruido",
+    "autor": "Fray Luis de León",
+    "obra": "Oda I, «Vida retirada»",
+    "cita_completa": "¡Qué descansada vida / la del que huye el mundanal ruido, / y sigue la escondida / senda, por donde han ido / los pocos sabios que en el mundo han sido!",
+    "letras": 44,
+    "oculta": {"palabra": "ESCUELA", "definicion": "Centro de enseñanza"},
+    "definiciones": [
+      {"respuesta": "EQUIDAD", "definicion": "Justicia, imparcialidad", "casillas": [29, 1, 27, 42, 35, 38, 4]},
+      {"respuesta": "SALUD", "definicion": "Lo que se desea al brindar", "casillas": [10, 19, 18, 24, 43]},
+      {"respuesta": "CHOQUE", "definicion": "Colisión", "casillas": [7, 26, 44, 23, 41, 21]},
+      {"respuesta": "UNIDAD", "definicion": "El número uno", "casillas": [33, 37, 15, 20, 36, 12]},
+      {"respuesta": "ELEVAR", "definicion": "Subir, alzar", "casillas": [5, 31, 25, 14, 13, 40]},
+      {"respuesta": "LEYENDAS", "definicion": "Relatos tradicionales con algo de fantasía", "casillas": [22, 30, 28, 3, 9, 16, 8, 6]},
+      {"respuesta": "ALUMNA", "definicion": "Estudiante", "casillas": [17, 39, 2, 32, 34, 11]}
+    ]
+  },
+  {
+    "numero": 16,
+    "fecha": "2026-11-05",
+    "frase": "Cultivo una rosa blanca en junio como en enero",
+    "autor": "José Martí",
+    "obra": "Versos sencillos (1891), XXXIX",
+    "cita_completa": "Cultivo una rosa blanca, / en junio como en enero, / para el amigo sincero / que me da su mano franca.",
+    "letras": 38,
+    "oculta": {"palabra": "CUBANO", "definicion": "Nacionalidad del autor"},
+    "definiciones": [
+      {"respuesta": "CALLEJÓN", "definicion": "Calle estrecha", "casillas": [19, 10, 3, 16, 32, 23, 38, 9]},
+      {"respuesta": "UNIÓN", "definicion": "Acción de juntar", "casillas": [8, 33, 26, 31, 22]},
+      {"respuesta": "BONITO", "definicion": "Pez parecido al atún; también, lindo", "casillas": [15, 12, 18, 5, 4, 29]},
+      {"respuesta": "AMANECER", "definicion": "Salida del sol", "casillas": [14, 30, 17, 25, 36, 28, 34, 37]},
+      {"respuesta": "NUEVA", "definicion": "Recién hecha", "casillas": [35, 2, 21, 6, 20]},
+      {"respuesta": "OSCURO", "definicion": "Sin luz", "casillas": [7, 13, 1, 24, 11, 27]}
+    ]
+  },
+  {
+    "numero": 17,
+    "fecha": "2026-11-06",
+    "frase": "Hombres necios que acusáis a la mujer sin razón",
+    "autor": "Sor Juana Inés de la Cruz",
+    "obra": "Redondillas, en Inundación castálida (1689)",
+    "cita_completa": "Hombres necios que acusáis / a la mujer sin razón, / sin ver que sois la ocasión / de lo mismo que culpáis.",
+    "letras": 39,
+    "oculta": {"palabra": "MONJA", "definicion": "Religiosa, como la autora"},
+    "definiciones": [
+      {"respuesta": "MARQUESA", "definicion": "Esposa del marqués", "casillas": [3, 21, 35, 14, 19, 9, 7, 36]},
+      {"respuesta": "OBSESIONES", "definicion": "Ideas fijas", "casillas": [2, 4, 20, 30, 23, 33, 38, 8, 6, 13]},
+      {"respuesta": "NOCHES", "definicion": "Horas sin sol", "casillas": [34, 12, 18, 1, 16, 32]},
+      {"respuesta": "JAZMÍN", "definicion": "Arbusto de flores blancas muy olorosas", "casillas": [29, 17, 37, 27, 11, 39]},
+      {"respuesta": "AURICULAR", "definicion": "Parte del teléfono que se acerca al oído", "casillas": [24, 15, 5, 22, 10, 28, 25, 26, 31]}
+    ]
+  },
+  {
+    "numero": 18,
+    "fecha": "2026-11-07",
+    "frase": "Vida, nada me debes, vida, estamos en paz",
+    "autor": "Amado Nervo",
+    "obra": "«En paz», en Elevación (1917)",
+    "cita_completa": "Amé, fui amado, el sol acarició mi faz. / ¡Vida, nada me debes! ¡Vida, estamos en paz!",
+    "letras": 31,
+    "oculta": {"palabra": "AMANTE", "definicion": "Que ama, como el poeta, que también fue amado"},
+    "definiciones": [
+      {"respuesta": "AMBOS", "definicion": "El uno y el otro", "casillas": [30, 9, 13, 25, 21]},
+      {"respuesta": "MEDIDAS", "definicion": "Dimensiones", "casillas": [24, 27, 18, 2, 11, 8, 26]},
+      {"respuesta": "AVES", "definicion": "Animales con plumas", "casillas": [23, 1, 14, 15]},
+      {"respuesta": "NEVADA", "definicion": "Caída de nieve", "casillas": [5, 12, 16, 19, 3, 4]},
+      {"respuesta": "TAPIZ", "definicion": "Paño tejido para cubrir paredes", "casillas": [22, 6, 29, 17, 31]},
+      {"respuesta": "EDÉN", "definicion": "Paraíso terrenal", "casillas": [20, 7, 10, 28]}
+    ]
+  },
+  {
+    "numero": 19,
+    "fecha": "2026-11-08",
+    "frase": "Nada te turbe, nada te espante, todo se pasa",
+    "autor": "Santa Teresa de Jesús",
+    "obra": "«Nada te turbe», hallado en su breviario",
+    "cita_completa": "Nada te turbe, / nada te espante, / todo se pasa, / Dios no se muda; / la paciencia / todo lo alcanza; / quien a Dios tiene / nada le falta: / solo Dios basta.",
+    "letras": 34,
+    "oculta": {"palabra": "TERESA", "definicion": "Nombre de la santa autora"},
+    "definiciones": [
+      {"respuesta": "TUBOS", "definicion": "Piezas huecas y alargadas", "casillas": [25, 8, 10, 28, 29]},
+      {"respuesta": "ETAPA", "definicion": "Fase, tramo de un recorrido", "casillas": [24, 7, 13, 20, 15]},
+      {"respuesta": "RESPETO", "definicion": "Consideración, acatamiento", "casillas": [9, 11, 33, 31, 30, 23, 26]},
+      {"respuesta": "EDAD", "definicion": "Años que se tienen", "casillas": [18, 27, 34, 14]},
+      {"respuesta": "SENTADA", "definicion": "Protesta en la que se ocupa el suelo", "casillas": [19, 17, 22, 16, 4, 3, 32]},
+      {"respuesta": "ANTENA", "definicion": "Apéndice de la cabeza de los insectos", "casillas": [21, 1, 5, 6, 12, 2]}
+    ]
+  },
+  {
+    "numero": 20,
+    "fecha": "2026-11-09",
+    "frase": "La luna vino a la fragua con su polisón de nardos",
+    "autor": "Federico García Lorca",
+    "obra": "«Romance de la luna, luna», en Romancero gitano (1928)",
+    "cita_completa": "La luna vino a la fragua / con su polisón de nardos. / El niño la mira, mira. / El niño la está mirando.",
+    "letras": 39,
+    "oculta": {"palabra": "GRANADA", "definicion": "Provincia natal del autor; también, una fruta"},
+    "definiciones": [
+      {"respuesta": "GAFAS", "definicion": "Anteojos", "casillas": [17, 2, 14, 35, 23]},
+      {"respuesta": "RONCA", "definicion": "De voz áspera", "casillas": [36, 26, 9, 20, 6]},
+      {"respuesta": "AVIÓN", "definicion": "Aeronave", "casillas": [16, 7, 28, 38, 31]},
+      {"respuesta": "NUDILLOS", "definicion": "Articulaciones de los dedos con que se llama a la puerta", "casillas": [34, 24, 32, 8, 12, 1, 21, 29]},
+      {"respuesta": "ARPÓN", "definicion": "Lanza para pescar ballenas", "casillas": [13, 15, 25, 30, 22]},
+      {"respuesta": "DUELOS", "definicion": "Combates entre dos; también, penas", "casillas": [37, 4, 33, 3, 10, 39]},
+      {"respuesta": "ANUAL", "definicion": "Que sucede cada año", "casillas": [19, 5, 18, 11, 27]}
+    ]
+  },
+  {
+    "numero": 21,
+    "fecha": "2026-11-10",
+    "frase": "Todo es según el color del cristal con que se mira",
+    "autor": "Ramón de Campoamor",
+    "obra": "«Las dos linternas», en Doloras (1846)",
+    "cita_completa": "¡Y es que en el mundo traidor / nada hay verdad ni mentira: / todo es según el color / del cristal con que se mira!",
+    "letras": 40,
+    "oculta": {"palabra": "DOLORA", "definicion": "Breve poema filosófico, género que creó el autor"},
+    "definiciones": [
+      {"respuesta": "DIQUE", "definicion": "Muro que contiene las aguas", "casillas": [3, 24, 32, 33, 34]},
+      {"respuesta": "OCULTAS", "definicion": "Escondidas", "casillas": [2, 14, 10, 21, 26, 40, 35]},
+      {"respuesta": "LLENOS", "definicion": "Colmados, sin hueco", "casillas": [28, 16, 5, 11, 15, 25]},
+      {"respuesta": "OCCIDENTE", "definicion": "Por donde se pone el sol", "casillas": [4, 29, 22, 38, 19, 36, 31, 1, 20]},
+      {"respuesta": "REMOS", "definicion": "Palas para mover una barca", "casillas": [23, 12, 37, 30, 6]},
+      {"respuesta": "ARREGLOS", "definicion": "Reparaciones; también, versiones musicales", "casillas": [27, 18, 39, 8, 9, 13, 17, 7]}
+    ]
+  },
+  {
+    "numero": 22,
+    "fecha": "2026-11-11",
+    "frase": "Tú me quieres alba, me quieres de espumas",
+    "autor": "Alfonsina Storni",
+    "obra": "«Tú me quieres blanca», en El dulce daño (1918)",
+    "cita_completa": "Tú me quieres alba, / me quieres de espumas, / me quieres de nácar. / Que sea azucena / sobre todas, casta.",
+    "letras": 33,
+    "oculta": {"palabra": "MADRES", "definicion": "Mujeres que han tenido hijos"},
+    "definiciones": [
+      {"respuesta": "MESES", "definicion": "Doce forman un año", "casillas": [3, 8, 11, 27, 24]},
+      {"respuesta": "ÁMBAR", "definicion": "Resina fósil amarilla", "casillas": [32, 16, 14, 15, 22]},
+      {"respuesta": "DUQUE", "definicion": "Título nobiliario superior al de marqués", "casillas": [25, 19, 18, 30, 10]},
+      {"respuesta": "RIELES", "definicion": "Barras sobre las que ruedan los trenes", "casillas": [9, 20, 4, 13, 23, 33]},
+      {"respuesta": "EMPAQUE", "definicion": "Distinción, señorío", "casillas": [26, 31, 29, 12, 5, 2, 21]},
+      {"respuesta": "SUITE", "definicion": "Habitación de lujo en un hotel", "casillas": [28, 6, 7, 1, 17]}
+    ]
+  },
+  {
+    "numero": 23,
+    "fecha": "2026-11-12",
+    "frase": "Una noche, una noche toda llena de perfumes",
+    "autor": "José Asunción Silva",
+    "obra": "«Nocturno» (1894)",
+    "cita_completa": "Una noche, / una noche toda llena de perfumes, de murmullos y de música de alas, / una noche / en que ardían en la sombra nupcial y húmeda las luciérnagas fantásticas.",
+    "letras": 35,
+    "oculta": {"palabra": "HERMANA", "definicion": "Hija de los mismos padres"},
+    "definiciones": [
+      {"respuesta": "HUÉSPED", "definicion": "Persona alojada en casa ajena", "casillas": [7, 1, 34, 35, 28, 23, 26]},
+      {"respuesta": "ELFO", "definicion": "Genio del bosque en la mitología nórdica", "casillas": [29, 22, 31, 5]},
+      {"respuesta": "REHÉN", "definicion": "Persona retenida como garantía", "casillas": [30, 27, 15, 8, 4]},
+      {"respuesta": "MANO", "definicion": "Tiene cinco dedos", "casillas": [33, 20, 10, 18]},
+      {"respuesta": "ALCANCE", "definicion": "Distancia a la que llega algo", "casillas": [3, 21, 6, 11, 12, 14, 16]},
+      {"respuesta": "NUDO", "definicion": "Lazo apretado; también, el centro de un relato", "casillas": [24, 9, 19, 13]},
+      {"respuesta": "ATÚN", "definicion": "Pez grande que se vende en lata", "casillas": [25, 17, 32, 2]}
+    ]
   }
 ]

@@ -132,6 +132,21 @@ function main() {
     fallos++;
   }
 
+  // Repeticiones entre partidas: avisos, no errores.
+  const vistas = { autor: new Map(), frase: new Map(), oculta: new Map(), respuesta: new Map() };
+  const repetidas = [];
+  const anotar = (tipo, valor, numero) => {
+    const clave = normalizar(valor);
+    if (vistas[tipo].has(clave)) repetidas.push(`${tipo} «${valor}» en nº ${vistas[tipo].get(clave)} y nº ${numero}`);
+    else vistas[tipo].set(clave, numero);
+  };
+  for (const p of partidas) {
+    anotar('autor', p.autor, p.numero);
+    anotar('frase', p.frase, p.numero);
+    anotar('oculta', p.oculta.palabra, p.numero);
+    for (const d of p.definiciones) anotar('respuesta', d.respuesta, p.numero);
+  }
+
   for (const p of partidas) {
     const { errores, avisos } = validarPartida(p);
     const marca = errores.length ? '✗' : '✓';
@@ -140,6 +155,8 @@ function main() {
     for (const a of avisos) console.log(`    aviso: ${a}`);
     fallos += errores.length;
   }
+
+  for (const r of repetidas) console.log(`  aviso: ${r}`);
 
   if (fallos) {
     console.log(`\n${fallos} error(es).`);
