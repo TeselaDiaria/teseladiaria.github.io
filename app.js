@@ -411,10 +411,19 @@
   function irADefinicion(i) {
     if (!juego || juego.progreso.terminada) return;
     const total = juego.p.definiciones.length;
+    const anterior = juego.cursor.modo === 'def' ? defActiva() : null;
     const casillas = juego.p.definiciones[(i + total) % total].casillas;
     juego.cursor = { modo: 'def', casilla: siguienteVacia(casillas, 0, false) || casillas[0] };
     actualizar();
-    enfocarCursor();
+    // Al pasar a la definición siguiente, la anterior sube hasta quedar bajo la barra fija.
+    if (anterior !== null && i === anterior + 1 && i < total) subirHasta(juego.itemsDef[anterior]);
+    else enfocarCursor();
+  }
+
+  function subirHasta(elemento) {
+    const barra = document.querySelector('.barra-partida').offsetHeight;
+    const destino = elemento.getBoundingClientRect().top + window.scrollY - barra - 8;
+    window.scrollTo({ top: destino, behavior: reducirMovimiento.matches ? 'auto' : 'smooth' });
   }
 
   function tocarCelda(evento) {
